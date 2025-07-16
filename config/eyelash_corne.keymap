@@ -47,11 +47,10 @@ rgb_encoder:
 
 scroll_encoder:
   scroll_encoder {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-    tap-ms = <300>;
+    compatible = "zmk,behavior-sensor-rotate-var";
+    #sensor-binding-cells = <2>;
+    bindings = <&msc SCRL_VERTICAL -1>, <&msc SCRL_VERTICAL 1>;
+    tap-ms = <100>;ap-ms = <300>;
   };
 
   keymap {
