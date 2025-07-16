@@ -51,7 +51,7 @@ scroll_encoder:
     #sensor-binding-cells = <0>;
     bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-    tap-ms = <150>;
+    tap-ms = <50>;
   };
 
   keymap {
