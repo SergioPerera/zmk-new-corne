@@ -35,6 +35,11 @@
       #binding-cells = <0>;
       bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
     };
+    
+    inc_dec_kp: enc_key_press {
+      compatible = "zmk,behavior-enc-key-press";
+      #binding-cells = <2>;
+    };
   };
 
   rgb_encoder: rgb_encoder {
