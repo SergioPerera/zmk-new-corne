@@ -35,11 +35,6 @@
       #binding-cells = <0>;
       bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
     };
-    
-    // inc_dec_kp: enc_key_press {
-    //   compatible = "zmk,behavior-enc-key-press";
-    //   #binding-cells = <2>;
-    // };
   };
 
   rgb_encoder: rgb_encoder {
@@ -51,16 +46,9 @@
   // scroll_encoder: scroll_encoder {
   //   compatible = "zmk,behavior-sensor-rotate";
   //   #sensor-binding-cells = <0>;
-  //   bindings = <&inc_dec_kp DOWN UP>;
+  //   bindings = <&kp DOWN>, <&kp UP>;
   //   tap-ms = <150>;
   // };
-
-  scroll_encoder: scroll_encoder {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&kp DOWN>, <&kp UP>;
-    tap-ms = <150>;
-  };
 
   keymap {
     compatible = "zmk,keymap";
@@ -101,7 +89,7 @@
                                               &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
         >;
 
-      sensor-bindings = <&scroll_encoder>;
+      sensor-bindings = <&inc_dec_kp DOWN UP>;
     };
 
     layer_3 {
@@ -114,7 +102,7 @@
                                                  &trans       &trans     &trans                                                                   &trans       &trans     &trans
         >;
 
-      sensor-bindings = <&scroll_encoder>;
+      sensor-bindings = <&inc_dec_kp DOWN UP>;
     };
   };
 };
