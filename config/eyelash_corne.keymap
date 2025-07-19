@@ -45,12 +45,6 @@ rgb_encoder:
     bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
   };
 
-volume_encoder: volume_encoder {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-};
-
 scroll_encoder:
   scroll_encoder {
     compatible = "zmk,behavior-sensor-rotate";
@@ -72,7 +66,7 @@ scroll_encoder:
                               &kp LGUI  &mo 1  &lt 3 SPACE                                                                 &lt 3 ENTER  &mo 2  &kp RALT
           >;
 
-      sensor-bindings = <&volume_encoder>;
+      sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
     };
 
     lower_layer {
