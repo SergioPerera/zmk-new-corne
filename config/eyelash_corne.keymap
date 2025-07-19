@@ -49,8 +49,8 @@ scroll_encoder:
   scroll_encoder {
     compatible = "zmk,behavior-sensor-rotate";
     #sensor-binding-cells = <0>;
-    bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-    tap-ms = <150>;
+    bindings = <&inc_dec_kp DOWN UP>;
+    tap-ms = <100>;
   };
   keymap {
     compatible = "zmk,keymap";
@@ -77,8 +77,8 @@ scroll_encoder:
           &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
                                                    &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
         >;
-      
-      sensor-bindings = <&inc_dec_kp DOWN UP>;
+
+      sensor-bindings = <&scroll_encoder>;
     };
 
     raise_layer {
