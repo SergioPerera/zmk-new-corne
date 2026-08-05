@@ -83,6 +83,13 @@
       keep-mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    minus_under: minus_under {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp MINUS>, <&kp UNDER>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
     rsr_vol: rsr_vol {
       compatible = "zmk,behavior-runtime-sensor-rotate";
       #sensor-binding-cells = <0>;
@@ -140,6 +147,24 @@
       timeout-ms = <50>;
       key-positions = <36 37>;
       bindings = <&brackets>;
+    };
+
+    combo_equal {
+      timeout-ms = <50>;
+      key-positions = <4 5>;
+      bindings = <&kp EQUAL>;
+    };
+
+    combo_minus {
+      timeout-ms = <50>;
+      key-positions = <17 18>;
+      bindings = <&minus_under>;
+    };
+
+    combo_plus {
+      timeout-ms = <50>;
+      key-positions = <32 33>;
+      bindings = <&kp PLUS>;
     };
 
     combo_grave {
