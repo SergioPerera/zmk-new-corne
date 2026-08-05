@@ -154,6 +154,12 @@
       bindings = <&kp EXCL>;
     };
 
+    combo_at {
+      timeout-ms = <50>;
+      key-positions = <2 15>;
+      bindings = <&kp AT>;
+    };
+
     combo_hash {
       timeout-ms = <50>;
       key-positions = <3 16>;
