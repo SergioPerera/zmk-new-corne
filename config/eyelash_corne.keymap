@@ -169,7 +169,7 @@
 
     combo_grave {
       timeout-ms = <50>;
-      key-positions = <13 41>;
+      key-positions = <0 13>;
       bindings = <&kp GRAVE>;
     };
 
@@ -221,10 +221,22 @@
       bindings = <&kp ASTRK>;
     };
 
-    combo_lpar {
+    combo_tilde {
       timeout-ms = <50>;
       key-positions = <10 25>;
-      bindings = <&kp LPAR>;
+      bindings = <&kp TILDE>;
+    };
+
+    combo_bslh {
+      timeout-ms = <50>;
+      key-positions = <11 26>;
+      bindings = <&kp BSLH>;
+    };
+
+    combo_pipe {
+      timeout-ms = <50>;
+      key-positions = <12 27>;
+      bindings = <&kp PIPE>;
     };
   };
 
