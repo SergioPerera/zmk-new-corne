@@ -48,6 +48,7 @@
       compatible = "zmk,behavior-tap-dance";
       display-name = "Shift/Caps Lock Tap Dance";
       #binding-cells = <0>;
+      tapping-term-ms = <300>;
       bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
     };
 
