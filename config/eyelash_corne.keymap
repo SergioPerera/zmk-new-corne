@@ -8,7 +8,6 @@
 #define L_NUMBER   3
 #define L_FKEYS    4
 #define L_FN       5
-#define L_SYMBOL   6
 
 
 #include <dt-bindings/zmk/bt.h>
@@ -251,7 +250,7 @@
             &kp TAB    &kp Q  &kp W     &kp E     &kp R      &kp T                                                   &mmv_up                           &kp Y              &kp U  &kp I      &kp O    &kp P     &kp BSPC
             &td0       &kp A  &kp S     &kp D     &kp F      &kp G                                    &mmv_left &mkp LCLK  &mmv_right             &kp H              &kp J  &kp K      &kp L    &kp SEMI  &mt RALT SQT
             &kp LCTRL  &kp Z  &kp X     &kp C     &kp V      &kp B        &kp C_PLAY_PAUSE                           &mmv_down                         &kp N              &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                                        &kp LGUI  &mo L_NAV  &lt L_NUMBER SPACE                                                                        &lt L_FKEYS ENTER  &mo L_SYMBOL      &td_fn
+                                        &kp LGUI  &mo L_NAV  &lt L_NUMBER SPACE                                                                        &lt L_FKEYS ENTER  &none             &td_fn
           >;
 
       sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -285,12 +284,12 @@
 
     number_layer{
       display-name = "NUMBER";
-      bindings = 
+      bindings =
         <
-          &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                           &trans                   &kp N6     &kp N7  &kp N8   &kp N9  &kp N0  &trans
-          &none &none &none &none &none &none                          &trans  &trans  &trans           &none      &kp N4  &kp N5   &kp N6  &none   &none
-          &none &none &none &none &none &none    &trans                        &trans                   &none      &kp N1  &kp N2   &kp N3  &none   &none
-                            &none &none &none                                                           &kp COMMA  &kp N0  &kp DOT
+          &none  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                          &trans                   &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+          &trans &trans &trans &trans &trans &trans                    &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+          &trans &trans &trans &trans &trans &trans   &trans                   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans &trans &trans                                                     &trans  &trans  &trans
         >;
 
       sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -322,18 +321,6 @@
       sensor-bindings = <&rsr_vol &rsr_trans>;
     };
 
-    symbol_layer{
-      display-name = "SYMBOL";
-      bindings =
-        <
-          &kp GRAVE &kp EXCL &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                                     &trans                   &none &none &none &none &none &trans
-          &kp CARET &kp AMPS &kp ASTRK &braces    &parens    &brackets                             &trans  &trans  &trans           &none &none &none &none &none &none
-          &kp BSLH  &kp PIPE &kp UNDER &kp MINUS  &kp PLUS   &kp EQUAL       &trans                        &trans                   &none &none &none &none &none &none
-                                       &trans     &trans     &trans                                                                 &none &none &none
-        >;
-
-      sensor-bindings = <&rsr_vol &rsr_trans>;
-    };
 
 };
 };
